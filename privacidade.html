@@ -21,14 +21,16 @@
 <body>
 
 <h1>Política de Privacidade — Tinho</h1>
-<p><em>Última atualização: 25 de setembro de 2026</em></p>
+<p><em>Última atualização: 2 de outubro de 2026</em></p>
 
 <div class="resumo">
 <p><strong>Resumo honesto:</strong> o Tinho não coleta, não armazena em servidores
 e não compartilha dados da criança. Não tem anúncios nem rastreamento. Todo o
 progresso fica gravado apenas no próprio aparelho — nos apps, no armazenamento
 do aplicativo; na versão web, no armazenamento do navegador. Nenhum áudio, traço
-desenhado ou resposta da criança sai do aparelho. O que sai é só
+desenhado ou resposta da criança sai do aparelho — a não ser que o próprio
+adulto salve ou compartilhe um desenho das Memórias ou um backup (que sai
+trancado com um código que só ele tem). O que sai sozinho é só
 <strong>do adulto</strong>: o recibo da compra do premium e, na versão web, o
 e-mail usado para entrar na conta do responsável.</p>
 </div>
@@ -57,6 +59,8 @@ Android e iOS e como versão web. Contato para qualquer assunto de privacidade:
       as escolhas feitas nela, os acertos nas perguntinhas do fim, quais
       bichinhos escondidos já achou nas figuras, as favoritas e se foi na hora de
       dormir;</li>
+  <li>as Memórias em família (seção 6): a atividade de cada mês, as datas, o
+      desenho, a resposta e as gravações de voz da criança;</li>
   <li>a aparência escolhida para o Tinho e as preferências (som, voz, tema,
       limite de tempo de uso, cronômetro do simulado);</li>
   <li>o PIN dos pais — gravado somente de forma embaralhada (hash com sal),
@@ -93,6 +97,9 @@ analisado, na hora e no próprio aparelho, para achar o estalo da palma: nenhuma
 voz é reconhecida, e o áudio <strong>não é gravado, não é guardado e nunca é
 enviado</strong>. O microfone fica ligado só enquanto a criança está nessa
 atividade. Sem a permissão, a criança bate palma tocando no botão.</p>
+<p>A única atividade em que a voz da criança é <strong>gravada</strong> é a das
+Memórias em família, para a família ouvir depois — e mesmo ali ela fica só no
+aparelho. Veja a seção 6.</p>
 
 <h2>5. Escrita à mão</h2>
 <p>Nas atividades de escrever letras e números, o reconhecimento do traço é
@@ -104,7 +111,69 @@ depois dele tudo funciona sem internet. Os traços desenhados
 o traço dela vira um crachá: ele fica guardado <strong>só no aparelho</strong>,
 nunca é enviado e é apagado junto com o perfil.</p>
 
-<h2>6. Compras</h2>
+<h2>6. Memórias em família</h2>
+<p>Uma vez por mês, o Tinho convida a família para uma atividade fora da tela
+(contar estrelas, montar uma cabana…). Depois, a criança conta como foi: faz um
+desenho no quadro branco do app, responde uma perguntinha e, nos apps, pode
+gravar a própria voz. Tudo isso — a atividade, as datas, o desenho (como
+imagem), a resposta e as gravações — fica guardado <strong>só no
+aparelho</strong>, no álbum daquela criança, e <strong>nunca é enviado</strong>
+ao desenvolvedor ou a terceiros. O app não usa a câmera.</p>
+<ul>
+  <li><strong>Microfone:</strong> nos apps, fica ligado só enquanto a criança
+      segura o botão de gravar. Diferente das outras atividades com
+      microfone, aqui o áudio <strong>é gravado</strong> — de propósito, para
+      a família ouvir depois —, mas fica só no aparelho e nunca é enviado nem
+      analisado. Sem a permissão, a memória segue sem a parte da voz. Na
+      versão web, não há gravação.</li>
+  <li><strong>Salvar e compartilhar:</strong> o desenho só sai do álbum
+      quando o adulto toca em salvar na galeria (no navegador, baixar) ou em
+      compartilhar. A partir daí, a cópia fica na galeria do aparelho ou no
+      aplicativo escolhido pelo adulto, sob o controle dele. O Tinho pede ao
+      sistema só a permissão de <em>adicionar</em> fotos — não lê a sua
+      galeria.</li>
+  <li><strong>Irmãos:</strong> se mais de uma criança usa o mesmo aparelho, o
+      adulto pode marcar que fizeram a atividade juntas; cada uma ganha a
+      memória no próprio álbum, e a página mostra com quem foi. Nada sai do
+      aparelho.</li>
+  <li><strong>Matemática:</strong> uma resposta de número (por exemplo,
+      quantas estrelas contaram) pode voltar uma vez como continha numa
+      sessão de Matemática. Essa continha não entra no progresso.</li>
+  <li><strong>Apagar:</strong> atrás do portão dos pais, o adulto pode apagar
+      o desenho, a voz e a resposta de uma memória. Excluir o perfil apaga o
+      álbum inteiro dele. Recomeçar o progresso <strong>não</strong> apaga as
+      memórias: o álbum é lembrança da família, não progresso.</li>
+</ul>
+
+<h2>7. Backup da família</h2>
+<p>No premium, o adulto pode salvar um <strong>backup</strong>: um arquivo com
+tudo o que está gravado no aparelho (os perfis, o progresso, as memórias com
+desenhos e vozes, e as preferências), para levar a outro aparelho ou guardar.</p>
+<ul>
+  <li><strong>Trancado no aparelho:</strong> o arquivo é cifrado no próprio
+      aparelho (XChaCha20-Poly1305) com um <strong>código de
+      recuperação</strong> de 8 caracteres, gerado ali e mostrado só ao
+      adulto. A chave sai do código por uma derivação lenta de propósito
+      (Argon2id), o que torna caro tentar adivinhá-lo. O código não vai dentro do arquivo e nunca chega até nós: sem
+      ele, ninguém abre o backup — nem a gente — e não há como recuperá-lo.
+      O código fica guardado no aparelho para os próximos backups, e o adulto
+      pode vê-lo de novo atrás do portão dos pais.</li>
+  <li><strong>O Tinho não envia nada:</strong> o arquivo sai pela janela de
+      compartilhar do sistema (no navegador, pelo download), e quem escolhe
+      onde guardar — Google Drive, iCloud, e-mail, um computador — é o adulto.
+      O serviço escolhido recebe só o arquivo trancado. O app não usa nenhuma
+      conta nem serviço do Google ou da Apple para o backup.</li>
+  <li><strong>Restaurar:</strong> também é do premium — antes, o app confere
+      a compra na loja (veja a seção 8), sem enviar nada do backup. O adulto
+      escolhe o arquivo no seletor do sistema e digita o código; restaurar troca tudo o que está no aparelho
+      pelo que veio no arquivo. A compra do premium e a voz instalada não vão
+      no backup — a compra se restaura pela loja.</li>
+  <li><strong>Lembrete:</strong> com o backup ligado, o app lembra o adulto,
+      uma vez por mês, de salvar um novo. O lembrete é só uma marca na tela;
+      não há notificação nem envio.</li>
+</ul>
+
+<h2>8. Compras</h2>
 <p>O Tinho vende uma única compra, feita <strong>pelo adulto</strong>, atrás do
 portão dos pais. Nos apps, o pagamento é processado pelo Google Play ou pela
 App Store, nas regras e na conta da loja. Na versão web, o pagamento é
@@ -116,7 +185,7 @@ o histórico dessa compra e, na web, o e-mail do responsável para o recibo. Sã
 dados da transação do adulto — nenhum dado da criança, do uso do app ou do
 progresso é enviado.</p>
 
-<h2>7. Conta do responsável (só na versão web)</h2>
+<h2>9. Conta do responsável (só na versão web)</h2>
 <p>Na versão web não há conta de loja, então o adulto cria uma conta com
 e-mail e senha para ser o dono da compra e poder restaurá-la em outro
 aparelho. Essa conta é gerenciada pelo Firebase Authentication, do Google
@@ -127,7 +196,7 @@ protegida; o Tinho nunca a armazena). O Tinho usa essa conta
 do progresso fica ligado a ela. Os apps de Android e iOS não pedem conta nem
 e-mail.</p>
 
-<h2>8. Crianças</h2>
+<h2>10. Crianças</h2>
 <p>O Tinho é feito para crianças e segue as políticas para famílias do Google
 Play e da App Store. Por isso a decisão mais importante é estrutural:
 <strong>não coletamos dado nenhum de criança</strong>. O que é informado sobre
@@ -136,12 +205,15 @@ até nós. Não há localização, identificadores para publicidade, anúncios d
 nenhum tipo, links para redes sociais, nem compras ou cadastro acessíveis sem o
 portão dos pais.</p>
 
-<h2>9. Apagar os dados</h2>
+<h2>11. Apagar os dados</h2>
 <ul>
   <li>Nos Ajustes, o adulto pode recomeçar o progresso de um perfil ou excluir
-      perfis.</li>
+      perfis. Excluir um perfil apaga também o álbum de Memórias dele;
+      recomeçar o progresso mantém as memórias (seção 6).</li>
   <li>Desinstalar o aplicativo apaga todos os dados do aparelho. Na versão
-      web, limpar os dados do site no navegador tem o mesmo efeito.</li>
+      web, limpar os dados do site no navegador tem o mesmo efeito. Um backup
+      que você tenha salvo (seção 7) continua onde você o guardou — para
+      apagá-lo, exclua o arquivo lá.</li>
   <li>O registro da compra permanece na sua conta da loja (Google/Apple), como
       em qualquer app.</li>
   <li>Para excluir a conta do responsável da versão web, escreva para
@@ -149,27 +221,30 @@ portão dos pais.</p>
       partir do e-mail da conta.</li>
 </ul>
 
-<h2>10. Seus direitos (LGPD)</h2>
+<h2>12. Seus direitos (LGPD)</h2>
 <p>Como os dados da criança ficam no seu aparelho e sob seu controle, o acesso,
-a correção e a exclusão estão sempre nas suas mãos, sem depender de nós. Para
+a correção e a exclusão estão sempre nas suas mãos, sem depender de nós — e o
+backup (seção 7) é a sua cópia portátil desses dados. Para
 os dados da conta e da compra do adulto, ou para qualquer dúvida ou pedido nos
 termos da Lei Geral de Proteção de Dados (Lei 13.709/2018), escreva para
 <a href="mailto:alexandrennr@gmail.com">alexandrennr@gmail.com</a>.</p>
 
-<h2>11. Mudanças nesta política</h2>
+<h2>13. Mudanças nesta política</h2>
 <p>Se esta política mudar, a nova versão será publicada neste mesmo endereço,
 com a data de atualização no topo. Mudanças que afetem o tratamento de dados só
 valem para versões novas do aplicativo.</p>
 
 <div class="en">
 <h1>Privacy Policy — Tinho (English)</h1>
-<p><em>Last updated: September 25, 2026</em></p>
+<p><em>Last updated: October 2, 2026</em></p>
 
 <p><strong>Honest summary:</strong> Tinho does not collect, store on servers,
 or share any child data. No ads, no tracking. All progress is stored only on
 the device itself — in the app's storage, or in the browser's storage on the
 web version. No audio, handwriting, or answers from the child ever leave the
-device. The only things that leave are <strong>the adult's</strong>: the
+device — unless the adult chooses to save or share a Memories drawing or a
+backup (which leaves encrypted with a code only the adult has). The only
+things that leave on their own are <strong>the adult's</strong>: the
 premium purchase receipt and, on the web version, the email used to sign in to
 the parent account.</p>
 
@@ -188,7 +263,8 @@ tests (answers, correct/incorrect, response time — used to adapt difficulty an
 build the parents' reports), the name the child is learning to write (with the
 syllables and pronunciation checked by the adult), the stories read (which
 story, the choices made, correct answers to the end-of-story questions, which
-hidden critters were found in the pictures, favorites and whether it was at bedtime), Tinho's chosen look and preferences, and the
+hidden critters were found in the pictures, favorites and whether it was at bedtime), the family Memories album (see
+below), Tinho's chosen look and preferences, and the
 parents' PIN (stored only as a salted hash). None of this is sent to the
 developer or anyone else; Tinho has no server holding usage data. On the web
 version this data lives in the browser's local storage. If device backup is
@@ -208,13 +284,56 @@ only), Tinho asks for microphone permission. Recognition runs
 <strong>entirely on the device</strong> with a speech model bundled in the app:
 audio is analyzed on the spot and is <strong>never recorded, stored, or
 sent</strong> anywhere. Tinho keeps only whether the answer was right. Without
-the permission, the activity simply does not appear.</p>
+the permission, the activity simply does not appear. The only activity in
+which the child's voice is <strong>recorded</strong> is Family Memories (see
+below), and even then it stays on the device.</p>
 
 <p><strong>Handwriting.</strong> Handwriting recognition runs on the device.
 In the apps it uses Google's ML Kit: the first time, the device downloads the
 Portuguese recognition model from Google. This download carries no child data,
 and afterwards everything works offline. Drawn strokes are
 <strong>never sent</strong>.</p>
+
+<p><strong>Family Memories.</strong> Once a month, Tinho invites the family
+to an off-screen activity. Afterwards the child tells how it went: a drawing on
+the app's whiteboard, a short answer and, in the apps, a voice recording. All of
+it — the activity, dates, drawing (as an image), answer and recordings — is
+stored <strong>only on the device</strong>, in that child's album, and is
+<strong>never sent</strong> to the developer or anyone else. The camera is never
+used. In the apps, the microphone is on only while the child holds the record
+button; unlike the other microphone activities, this audio <strong>is
+recorded</strong> on purpose, so the family can listen later, but it stays on
+the device and is never sent or analyzed. Without the permission, the memory
+works without voice; the web version does not record. A drawing leaves the
+album only when the adult taps save to gallery (download, in the browser) or
+share; that copy is then under the adult's control. Tinho only asks the system
+for permission to <em>add</em> photos and never reads your gallery. Siblings on
+the same device can be marked as having done the activity together: each gets
+the memory in their own album, and the page shows who they were with. A number
+answer (e.g. how many stars they counted) may come back once as a math problem;
+it does not count toward progress. Behind the parental gate, the adult can
+delete a memory's drawing, voice and answer; deleting a profile deletes its
+whole album; resetting progress does <strong>not</strong> delete memories.</p>
+
+<p><strong>Family backup.</strong> With premium, the adult can save a backup:
+a file with everything stored on the device (profiles, progress, memories with
+drawings and voices, and preferences), to move to another device or keep. The
+file is <strong>encrypted on the device</strong> (XChaCha20-Poly1305) with a
+8-character recovery code generated there and shown only to the adult (the key
+is derived from it with Argon2id, which makes guessing expensive). The
+code is not inside the file and never reaches us: without it nobody can open the
+backup — not even us — and it cannot be recovered. The code stays on the device
+for future backups and can be viewed again behind the parental gate.
+<strong>Tinho sends nothing:</strong> the file leaves through the system share
+sheet (a download, in the browser), and the adult chooses where to keep it
+(Google Drive, iCloud, email, a computer); that service receives only the
+encrypted file. No Google or Apple account or service is used for the backup.
+Restoring is premium too: first the app checks the purchase with the store,
+without sending anything from the backup. Restoring replaces everything on the
+device with the file's contents; the
+premium purchase and installed voice are not included (the purchase is restored
+through the store). With backup on, the app shows a monthly reminder on screen;
+there are no notifications.</p>
 
 <p><strong>Purchases.</strong> Tinho offers a single one-time purchase, made
 by the adult behind a parental gate. In the apps, payment is processed by
@@ -242,8 +361,10 @@ identifiers, ads, social links, or purchases or sign-up reachable without the
 parental gate.</p>
 
 <p><strong>Data deletion.</strong> Parents can reset or delete profiles in
-Settings; uninstalling the app (or clearing the site's data in the browser, on
-the web) deletes all data from the device. The purchase record remains with
+Settings (deleting a profile also deletes its Memories album; resetting keeps
+it); uninstalling the app (or clearing the site's data in the browser, on
+the web) deletes all data from the device; a backup file you saved stays where
+you put it until you delete it there. The purchase record remains with
 your store account, as with any app. To delete a web parent account, email
 <a href="mailto:alexandrennr@gmail.com">alexandrennr@gmail.com</a> from the
 account's address.</p>
